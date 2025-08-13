@@ -1,0 +1,72 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+nav{
+    background-color: black;
+    color: white;
+    height: 80px;
+    padding: 0px 12px;
+    font-size: 27px;
+    display: flex;
+    align-items: center;
+    font-family: "Roboto", sans-serif;
+}
+nav ul{
+    list-style-type: none ;
+}
+.gameContainer{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+.container{
+    display: grid;
+    grid-template-columns: repeat(3,10vw);
+    grid-template-rows: repeat(3,10vw);
+    font-family: "Roboto", sans-serif;
+    position: relative;
+}
+.container div{
+    border: 2px solid black;
+    font-size: 8vw;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    border-top: 0;
+    border-left: 0;
+}
+
+#box3,#box6,#box9{
+    border-right: 0;
+}
+.box:hover{
+    background-color: mediumslateblue;
+}
+#box7,#box8,#box9{
+    border-bottom: 0;
+}
+.gameInfo{
+    padding: 0px 34px;
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+}
+
+@media screen and (max-width:600px){
+     .gameContainer{
+        flex-wrap: wrap;
+     }
+     .gameInfo{
+        margin-top: 34px;
+     }
+     .gameInfo h1{
+        font-size: 1.rem;
+        font-weight: bold;
+     }
+     .container{
+    grid-template-columns: repeat(3,20vw);
+    grid-template-rows: repeat(3,20vw);
+    }
+
+}
